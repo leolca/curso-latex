@@ -1,0 +1,104 @@
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Como inserir uma figura no documento}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+\begin{figure}[h!]
+  \centering
+  \label{fig:tux}
+  \includegraphics[width=0.5\textwidth]
+                     {334px-tuxsvg.png}
+  \caption{Tux.}
+\end{figure}
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+\begin{figure}[h!]
+  \centering
+  \label{fig:tux}
+    \includegraphics[width=0.5\textwidth]{figures/334px-tuxsvg.png}
+  \caption{Tux.}
+\end{figure}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Referenciando uma figura no texto}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  Veja a Figura \ref{fig:tux} 
+  na página \pageref{fig:tux}.
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  Veja a Figura \ref{fig:tux} na página \pageref{fig:tux}.
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Subfiguras}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+\begin{figure}[ht]
+\centering
+\subfigure[Tux 1]{
+   \includegraphics[width=0.3\textwidth] 
+              {figures/334px-tuxsvg.png}
+   \label{fig:tux1}
+ }
+ \subfigure[Tux 2]{
+   \includegraphics[width=0.3\textwidth] 
+                      {figures/tux2.png}
+   \label{fig:tux2}
+ }
+\caption{Linux Tux.}
+\end{figure}
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+\begin{figure}[ht]
+\centering
+\subfigure[Tux 1]{
+   \includegraphics[width=0.3\textwidth] {figures/334px-tuxsvg.png}
+   \label{fig:tux1}
+ }
+ \subfigure[Tux 2]{
+   \includegraphics[width=0.3\textwidth] {figures/tux2.png}
+   \label{fig:tux2}
+ }
+\caption{Linux Tux.}
+\end{figure}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{referenciando as figuras}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  Veja as subfiguras \ref{fig:tux1} 
+  e \ref{fig:tux2} na página 
+  \pageref{fig:tux1}.
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  Veja as subfiguras \ref{fig:tux1} e \ref{fig:tux2} na página \pageref{fig:tux1}.
+  \end{fmpage}
+  \end{columns}
+\end{frame}

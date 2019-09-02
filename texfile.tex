@@ -1,0 +1,623 @@
+\begin{frame}
+\frametitle{Arquivo .tex}
+\framesubtitle{principal arquivo do seu documento}
+O arquivo .tex será o principal arquivo do seu documento. Neste arquivo você incluirá/definirá:
+\begin{itemize}
+    \item classe do documento
+    \item tamanho de fonte, tamanho da página, coluna simples ou dupla, etc
+    \item pacotes
+    \item texto, figuras, tabelas, equações
+    \item outros arquivos .tex
+    \item bibliografia
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Espaços em branco}
+\framesubtitle{}
+  Um ou vários espaços em branco são tratados como um único espaço em branco.
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+Não interessa se introduz apenas
+um ou vários     espaços depois
+de uma palavra.
+
+Uma linha em branco inicia um novo
+parágrafo. 
+   \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+Não interessa se introduz apenas
+um ou vários     espaços depois
+de uma palavra.
+
+Uma linha em branco inicia um novo
+parágrafo.
+   \end{fmpage}
+   \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Caracteres reservados}
+\framesubtitle{}
+Alguns caracteres são reservados:
+\begin{verbatim}
+#  $  %  ^  &  _  {  }  ~  \ 
+\end{verbatim}
+
+Para escrever um desses caracteres é necessário utilizar o caractere de escape.
+  \vspace{1cm}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  \# \$ \% \^{} \& \_ \{ \} \~{} 
+  \textbackslash
+   \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \# \$ \% \^{} \& \_ \{ \} \~{}
+  \textbackslash
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Comandos}
+\framesubtitle{}
+Começam com um backslash e têm um nome que consiste apenas de letras. Os comandos obedecem à seguinte sintaxe:
+
+\begin{verbatim}
+\commandname[option1,option2,...]{argument1}{argument2}...
+\end{verbatim}
+
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+Li que o Knuth divide as
+pessoas que trabalham com o \TeX{}
+em \TeX{}nicos e \TeX pertos.\\
+Hoje é \today.
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+Li que o Knuth divide as
+pessoas que trabalham com o \TeX{}
+em \TeX{}nicos e \TeX pertos.\\
+Hoje é \today.
+   \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Comentários}
+\framesubtitle{}
+Tudo o que vem após o carácter \% é um comentário. Podemos também fazer comentários em bloco.
+
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+Este é um % estúpido
+% Melhor: instrutivo <----
+exemplo: Supercal%
+ifragilist%
+icexpialidocious
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+Este é um % estúpido
+% Melhor: instrutivo <----
+exemplo: Supercal%
+ifragilist%
+icexpialidocious
+   \end{fmpage}
+  \end{columns}
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+Este é outro
+\begin{comment}
+bastante estúpido,
+mas instrutivo
+\end{comment}
+exemplo de como embeber
+comentários nos seus documentos.
+  \end{verbatim}
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+Este é outro
+\begin{comment}
+bastante estúpido,
+mas instrutivo
+\end{comment}
+exemplo de como embeber
+comentários nos seus documentos.
+   \end{fmpage}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Estrutura}
+\framesubtitle{}
+  A seguinte estrutura é esperada em um arquivo \LaTeX{}.
+
+%  \begin{verbatim}
+%\documentclass{...}
+%\usepackage{...}
+%...
+%%\begin{document}
+%...
+%\end{document}
+%  \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exemplo}
+\framesubtitle{}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+%  \begin{verbatim}
+%\documentclass{article}
+%% esta linha é específica para
+%% o Português e outras línguas
+%% com caracteres acentuados.
+%\usepackage[latin1]{inputenc}
+%\begin{document}
+%Pequeno é belo.
+%\end{document}
+%  \end{verbatim}
+  \column{.5\textwidth}
+  \vspace{-0.3cm}
+  \begin{figure}[h!]
+  \centering
+  \setlength\fboxsep{0pt}
+  \setlength\fboxrule{0.5pt}
+  \fbox{\includegraphics[width=0.8\textwidth]{minimal.pdf}}
+  \label{fig:minimal}
+  \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exemplo 2}
+\framesubtitle{}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+%  \begin{verbatim}
+%\documentclass[a4paper,11pt]{article}
+%% Esta linha é necessária para
+%% documentos em línguas que incluam
+%% caracteres acentuados.
+%\usepackage[latin1]{inputenc}
+%% Define o autor e título
+%\author{H.Partl}
+%\title{Minimalista}
+%\begin{document}
+%% Gera o título
+%\maketitle
+%% Insere a tabela de conteúdos
+%\tableofcontents
+%\section{Algumas Palavras Interessantes}
+%Bem, e aqui está o inicio do meu adorado artigo.
+%\section{Adeus, Mundo!}
+%\ldots{} e aqui ele acaba.
+%\end{document}
+%  \end{verbatim}
+  \column{.5\textwidth}
+  \vspace{-0.3cm}
+  \begin{figure}[h!]
+  \centering
+  \setlength\fboxsep{0pt}
+  \setlength\fboxrule{0.5pt}
+  \fbox{\includegraphics[width=0.8\textwidth]{minimal2.pdf}}
+  \label{fig:minimal2}
+  \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{classes de documento}
+  %\begin{verbatim}
+  %\documentclass[opções]{classe}
+  %\end{verbatim}
+  Exemplo:
+  %\begin{verbatim}
+  %\documentclass[11pt,twoside,a4paper]{article}
+  %\end{verbatim}
+  Classes
+  \begin{description}
+  \item[article] para artigos em jornais científicos, pequenos relatórios, documentação de programas, convites, ...
+  \item[report] para relatórios mais longos contendo vários capítulos, pequenos livros, teses de doutorado, ...  
+  \item[book] para livros
+  \item[slides] para slides. Esta classe usa letras grandes do tipo sans serif. Deve-se
+       considerar utilizar o pacote Beamer.
+  \end{description}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Documento}
+\framesubtitle{atributos dos docuementos}
+  Opções:
+
+  \setbeamertemplate{description item}[align left]
+  \begin{description}%[labelwidth=\widthof{\bfseries titlepage, notitlepage}]
+  \item[10pt, 11pt, 12pt] -- para definir o tamanho da fonte
+  \item[a4paper, letterpaper] -- para definir o tamanho do papel
+  \item[titlepage, notitlepage] -- especifica se se deve criar uma nova página depois do título do documento ou não
+  \item[twocolumn] -- documento em duas colunas
+  \item[twoside, oneside] -- impressão frente-verso ou não  
+  \item[openright, openany] -- faz os capítulos começarem apenas nas páginas do lado direito ou na próxima disponível
+  \item[landscape] -- formato paisagem
+  \end{description}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Incluir um documento em outro documento}
+  Pomos incluir um arquivo \texttt{.tex} dentro de outro. Para tanto, basta fazer:
+  
+  \begin{verbatim}
+  \input{nome_do_arquivo}
+  
+  \include{nome_do_arquivo} 
+  equivalente a 
+  \clearpage \input{nome_do_arquivo} \clearpage
+  \end{verbatim}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Comandos de Secção}
+  
+\begin{verbatim}
+\part{}
+
+\chapter{}
+
+\section{}
+
+\subsection{}
+
+\subsubsection{}
+
+\paragraph{}
+\end{verbatim}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{quebra de linha e nova página}
+
+  \begin{scriptsize}
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  você pode \\ quebrar uma linha 
+  quando quiser no \newline \LaTeX, 
+  entretanto uma simples quebra
+  de linha do código não reflete 
+  em quebra de linha... 
+  
+  mas você pode deixar uma linha 
+  em branco
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  você pode \\ quebrar uma linha 
+  quando quiser no \newline \LaTeX, 
+  entretanto uma simples quebra
+  de linha do código não reflete 
+  em quebra de linha... 
+  
+  mas você pode deixar uma linha 
+  em branco
+  \end{fmpage}
+  \end{columns}
+  \end{scriptsize}
+  
+  Comando utilizado para iniciar uma nova página:
+ 
+  \begin{verbatim}
+  \newpage
+  \end{verbatim} 
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Hifenização de palavras}
+  \begin{verbatim}
+\hyphenation{lista de palavras}
+  \end{verbatim}
+
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  \hyphenation{MINICURSOLATEX uni-ver-si-da-de}
+  Penso que isto é: su\-per\-cal\-%
+  i\-frag\-i\-lis\-tic\-ex\-pi\-%
+  al\-i\-do\-cious
+  
+  Teste de hifenização da palavra 
+  universidade, inclusive de  
+  certa  palavra MINICURSOLATEX, 
+  que não deve ser hifenizada.
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \hyphenation{MINICURSOLATEX uni-ver-si-da-de}
+  Penso que isto é: su\-per\-cal\-%
+  i\-frag\-i\-lis\-tic\-ex\-pi\-%
+  al\-i\-do\-cious
+  
+  Teste de hifenização da palavra 
+  universidade, inclusive de  
+  certa  palavra MINICURSOLATEX, 
+  que não deve ser hifenizada.
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Estilo de fonte em um texto}
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  \textbf{Bold} \\
+  \textit{Italic} \\
+  \texttt{Monotype} \\
+  \textsf{Sans Serif} \\
+  \textsc{SmallCaps} \\
+  \textsl{Slanted} \\
+  \emph{Enfase}
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \textbf{Bold} \\
+  \textit{Italic} \\
+  \texttt{Monotype} \\
+  \textsf{Sans Serif} \\
+  \textsc{SmallCaps} \\
+  \textsl{Slanted} \\
+  \emph{Enfase}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Tamanho da fonte em um texto}
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \scriptsize
+  \begin{verbatim}
+  {\tiny texto texto ...} \\
+  {\scriptsize texto texto ...} \\
+  {\footnotesize texto texto ...} \\
+  {\small texto texto ...} \\
+  {\normalsize texto texto ...} \\
+  {\large texto texto ...} \\
+  {\Large texto texto ...} \\
+  {\LARGE texto texto ...} \\
+  {\huge texto texto ...} \\
+  {\Huge texto texto ...}
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  {\tiny texto texto ...} \\
+  {\scriptsize texto texto ...} \\
+  {\footnotesize texto texto ...} \\
+  {\small texto texto ...} \\
+  {\normalsize texto texto ...} \\
+  {\large texto texto ...} \\
+  {\Large texto texto ...} \\
+  {\LARGE texto texto ...} \\
+  {\huge texto texto ...} \\
+  {\Huge texto texto ...}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Alinhamento de texto}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  \begin{center}
+  texto texto
+  \end{center}
+  \begin{flushleft}
+  texto texto
+  \end{flushleft}
+  \begin{flushright}
+  texto texto
+  \end{flushright}
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \begin{center}
+  texto texto
+  \end{center}
+  \begin{flushleft}
+  texto texto
+  \end{flushleft}
+  \begin{flushright}
+  texto texto
+  \end{flushright}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Layout de uma página}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{itemize}
+  \item \verb|\hoffset|
+  \item \verb|\voffset|
+  \item \verb|\oddsidemargin|
+  \item \verb|\topmargin|
+  \item \verb|\headheight|
+  \item \verb|\headsep|
+  \item \verb|\textheight| 
+  \item \verb|\textwidth|
+  \item \verb|\marginparsep|
+  \item \verb|\marginparwidth|
+  \item \verb|\footskip|
+  \end{itemize}
+  \column{.5\textwidth}
+  \vspace{-0.5cm}
+\begin{figure}[h!]
+  \centering
+  \label{fig:Latex_layout}
+    \includegraphics[width=0.85\textwidth]{figures/Latex_layout.pdf}
+  %\caption{Tux.}
+\end{figure}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Layout}
+  \scriptsize
+  \begin{verbatim}
+%\documentclass[a4paper]{article}
+%\usepackage[top=tlength, bottom=blength, left=llength,
+%        right=rlength]{geometry}
+%\usepackage[a4paper,landscape]{geometry}
+  \end{verbatim} 
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Cabeçalho e Rodapé}
+  \scriptsize
+  \begin{verbatim}
+\usepackage{fancyhdr}
+
+\fancyhead[CE]{Author's Name}
+\fancyhead[CO]{\today}
+\fancyfoot[LE,RO]{\thepage}
+  \end{verbatim} 
+  
+  \url{https://ctan.org/pkg/fancyhdr}
+  \url{https://www.overleaf.com/learn/latex/Headers_and_footers}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{misturar coluna simples com multiplas colunas}
+\scriptsize
+\begin{verbatim}
+\begin{multicols}{2}
+  lots of text
+\end{multicols}
+\end{verbatim} 
+
+\url{https://www.ctan.org/pkg/multicol}
+\url{https://www.overleaf.com/learn/latex/Multiple_columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Nota s de rodapé}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+Exemplo de nota de rodapé
+\footnote{Isto é uma nota de rodapé.}.
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  Exemplo de nota de rodapé\footnote{Isto é uma nota de rodapé.}.
+  \vspace{5cm}
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Sumário}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+\tableofcontents
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \scriptsize
+  \tableofcontents
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Sumário - local corrente}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+\tableofcontents[current,currentsection]
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  \scriptsize
+  \tableofcontents[current,currentsection]
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\subsection{Listas}
+\input{listas}
+
+\subsection{Figuras}
+\input{figuras}
+
+\subsection{Tabelas}
+\input{tabelas}
+
+\subsection{Fórmuas Matemáticas}
+\input{formulas}
+
+\subsection{Linguística}
+\input{linguistica.tex}
+
+\subsection{Bibliografia}
+\input{bibliografia.tex}

@@ -1,0 +1,108 @@
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Bibliografia - como inserir uma obra e citá-la}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+  @book{Knuth86,
+  author    = {Donald E. Knuth},
+  title     = {The TeXbook},
+  publisher = {Addison-Wesley},
+  year      = {1986},
+  isbn      = {0-201-13447-0}
+  }
+  
+  Citação no texto \cite{Knuth86}, \citep{Knuth86}.
+  \end{verbatim} 
+  \column{.5\textwidth}
+  \begin{fmpage}{\textwidth}
+  Citação no texto \cite{Knuth86}, \citep{Knuth86}.
+  \end{fmpage}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Atributos de um item de bibliografia}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+@article{...,
+    author  = "...",
+    title   = "...",
+    year    = "...",
+    journal = "...",
+    volume  = "...",
+    number  = "...",
+    pages   = "..."
+}
+  \end{verbatim} 
+  \column{.5\textwidth}
+\begin{verbatim}
+@conference{...,
+    author    = "...",
+    title     = "...",
+    booktitle = "...",
+    %editor   = "...",
+    %volume   = "...",
+    %number   = "...",
+    %series   = "...",
+    %pages    = "...",
+    %address  = "...",
+    year      = "...",
+    %month    = "...",
+    %publisher= "...",
+    %note     = "..."
+}
+\end{verbatim}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Bibliografia - classes dos itens}
+  \scriptsize
+  \begin{columns}[c]
+  \column{.5\textwidth}
+  \begin{verbatim}
+@inbook
+
+@incollection
+
+@inproceedings 
+
+@mastersthesis
+  \end{verbatim} 
+  \column{.5\textwidth}
+\begin{verbatim}
+@misc 
+
+@phdthesis 
+
+@proceedings 
+
+@techreport 
+
+@unpublished 
+\end{verbatim}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Documento}
+\framesubtitle{Bibliografia - estilo}
+  \scriptsize
+  \begin{verbatim}
+\bibliographystyle{apalike}
+\bibliography{bibliografia}
+  \end{verbatim}
+  
+  ver slide \pageref{bibliografia}.
+\end{frame}
+
+
