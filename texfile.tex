@@ -150,14 +150,14 @@ comentários nos seus documentos.
 \framesubtitle{}
   A seguinte estrutura é esperada em um arquivo \LaTeX{}.
 
-%  \begin{verbatim}
-%\documentclass{...}
-%\usepackage{...}
-%...
-%%\begin{document}
-%...
-%\end{document}
-%  \end{verbatim}
+\begin{verbatim}
+\documentclass{...}
+\usepackage{...}
+...
+\begin{document}
+...
+\end{document}
+\end{verbatim}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -166,16 +166,16 @@ comentários nos seus documentos.
   \scriptsize
   \begin{columns}[c]
   \column{.5\textwidth}
-%  \begin{verbatim}
-%\documentclass{article}
-%% esta linha é específica para
-%% o Português e outras línguas
-%% com caracteres acentuados.
-%\usepackage[latin1]{inputenc}
-%\begin{document}
-%Pequeno é belo.
-%\end{document}
-%  \end{verbatim}
+\begin{verbatim}
+\documentclass{article}
+% esta linha é específica para
+% o Português e outras línguas
+% com caracteres acentuados.
+\usepackage[latin1]{inputenc}
+\begin{document}
+Pequeno é belo.
+\end{document}
+\end{verbatim}
   \column{.5\textwidth}
   \vspace{-0.3cm}
   \begin{figure}[h!]
@@ -194,26 +194,26 @@ comentários nos seus documentos.
   \scriptsize
   \begin{columns}[c]
   \column{.5\textwidth}
-%  \begin{verbatim}
-%\documentclass[a4paper,11pt]{article}
-%% Esta linha é necessária para
-%% documentos em línguas que incluam
-%% caracteres acentuados.
-%\usepackage[latin1]{inputenc}
-%% Define o autor e título
-%\author{H.Partl}
-%\title{Minimalista}
-%\begin{document}
-%% Gera o título
-%\maketitle
-%% Insere a tabela de conteúdos
-%\tableofcontents
-%\section{Algumas Palavras Interessantes}
-%Bem, e aqui está o inicio do meu adorado artigo.
-%\section{Adeus, Mundo!}
-%\ldots{} e aqui ele acaba.
-%\end{document}
-%  \end{verbatim}
+\begin{verbatim}
+\documentclass[a4paper,11pt]{article}
+% Esta linha é necessária para
+% documentos em línguas que incluam
+% caracteres acentuados.
+\usepackage[latin1]{inputenc}
+% Define o autor e título
+\author{H.Partl}
+\title{Minimalista}
+\begin{document}
+% Gera o título
+\maketitle
+% Insere a tabela de conteúdos
+\tableofcontents
+\section{Algumas Palavras Interessantes}
+Bem, e aqui está o inicio do meu adorado artigo.
+\section{Adeus, Mundo!}
+\ldots{} e aqui ele acaba.
+\end{document}
+\end{verbatim}
   \column{.5\textwidth}
   \vspace{-0.3cm}
   \begin{figure}[h!]
@@ -229,13 +229,13 @@ comentários nos seus documentos.
 \begin{frame}[fragile]
 \frametitle{Documento}
 \framesubtitle{classes de documento}
-  %\begin{verbatim}
-  %\documentclass[opções]{classe}
-  %\end{verbatim}
+  \begin{verbatim}
+  \documentclass[opções]{classe}
+  \end{verbatim}
   Exemplo:
-  %\begin{verbatim}
-  %\documentclass[11pt,twoside,a4paper]{article}
-  %\end{verbatim}
+  \begin{verbatim}
+  \documentclass[11pt,twoside,a4paper]{article}
+  \end{verbatim}
   Classes
   \begin{description}
   \item[article] para artigos em jornais científicos, pequenos relatórios, documentação de programas, convites, ...
