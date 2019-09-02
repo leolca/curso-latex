@@ -93,9 +93,33 @@
 \date{\today}
 \institute{UFSJ}
 
+
+\usepackage{verbatim}
+
+\usepackage{color}
+\definecolor{BlueGreen}{cmyk}{0.8,0,0.5,0.3}
 \usepackage{hyperref}
 \hypersetup{colorlinks=false}
 \newcommand{\hrefcolor}[2]{\textcolor{BlueGreen}{\href{#1}{#2}}}
+
+\usepackage{multido}
+\usepackage{lipsum}
+\usepackage[table]{xcolor}
+\usepackage{tipa}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{tikz-dependency}
+\usepackage{phonrule}
+
+\newsavebox{\fmbox}
+\newenvironment{fmpage}[1]
+{\begin{lrbox}{\fmbox}\begin{minipage}{#1}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}}
+
+
+\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+
+
 
 \begin{document}
 
@@ -104,10 +128,42 @@
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Faça o download da apresentação através da url abaixo.}
+\framesubtitle{Utilize a câmera do celular!}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/qr_img.png}
+  \caption{\url{https://github.com/leolca/curso-latex/raw/master/curso_latex.pdf}.}
+  \label{fig:qrcode}
+  \end{figure}
+\end{frame}
+
 \section{Introdução}\label{sec:intro}
 \input{introducao}
 
+\section{Documento}\label{sec:doc}
+\input{documento.tex}
 
+\section{Ajuda}\label{sec:ajuda}
+\begin{frame}[fragile]
+\frametitle{Ajuda}
+\framesubtitle{Onde buscar ajuda?}
+  \begin{description}
+  \item[lshort] : \hrefcolor{http://www.ctan.org/tex-archive/info/lshort/portuguese/ptlshort.pdf}{Introdução ao \LaTeX}
+  \item[wikibooks] : \hrefcolor{http://en.wikibooks.org/wiki/LaTeX}{http://en.wikibooks.org/wiki/LaTeX}
+  \item[CTAN] : \hrefcolor{http://www.ctan.org/}{http://www.ctan.org/}
+  \begin{enumerate}
+  \item \hrefcolor{https://ctan.org/pkg/fancyhdr}{Fancyheadings package}
+  \item \hrefcolor{https://ctan.org/pkg/beamer}{Beamer package} (apresentações)
+  \item \hrefcolor{https://ctan.org/pkg/geometry}{Geometry package}
+  \item \hrefcolor{https://ctan.org/pkg/hyperref}{Hyperref package}
+  \item \hrefcolor{http://en.wikibooks.org/wiki/LaTeX/Packages}{Packages list}
+  \end{enumerate}
+  \item[google group] : \hrefcolor{https://groups.google.com/forum/?hl=en\#!forum/comp.text.tex}{comp.text.tex}
+  \item[Overleaf] : \hrefcolor{https://www.overleaf.com/learn}{Overleaf - learn}
+  \item[StackExchange] : \hrefcolor{https://tex.stackexchange.com/}{StackExchange} \end{description}
+\end{frame}
 
 \bibliographystyle{apalike}
 \bibliography{bibliografia}

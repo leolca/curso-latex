@@ -57,7 +57,7 @@ Even though Donald Knuth himself has suggested a few areas in which TeX could ha
 \frametitle{Por que utilizar \LaTeX{}?}
 \framesubtitle{}
 \begin{itemize}
-  \item portabilidade - Linux, Mac OS, Windows, BSDs, Solaris, etc.
+  \item portabilidade - Linux, Mac OS, Windows, BSDs, Solaris, etc
   \item compatibilidade - padrão imutável
   \item flexibilidade
   \item controle
@@ -66,6 +66,8 @@ Even though Donald Knuth himself has suggested a few areas in which TeX could ha
   \item disseminado (principalmente no meio academico)
   \item estabilidade
   \item livre
+  \item controle de versão
+  \item modularizar e colaborar documentos
 \end{itemize}
 \end{frame}
 
@@ -85,16 +87,115 @@ Even though Donald Knuth himself has suggested a few areas in which TeX could ha
 \framesubtitle{Hoje é muito mais fácil utilizar e aprender qualquer coisa.}
 \begin{itemize}
   \item \hrefcolor{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}{The Not So Short Introduction to LaTeX2e}
-  \item \hrefcolor{http://www.sbm.org.br/periodicos/latexemportugues.pdf}{Breve Introdução ao LATEX2e}
   \item Google Groups: \hrefcolor{https://groups.google.com/forum/\#!forum/comp.text.tex}{comp.text.tex}
-  \item a
+  \item \hrefcolor{https://www.overleaf.com/learn/latex/Tutorials}{Tutorial Overleaf}
+  \item \hrefcolor{https://en.wikibooks.org/wiki/LaTeX}{Wikibooks}
+  \item \hrefcolor{https://tex.stackexchange.com/}{StackExchange}
+  \item Google
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{\LaTeX{}}
+
+\begin{frame}[fragile]
+\frametitle{Como instalar o \LaTeX{}?}
 \framesubtitle{}
 \begin{itemize}
-  \item
+  \item \hrefcolor{http://www.tug.org/texlive/}{TeXLive} (GNU/Linux, Mac OS, Windows)
+  \item \hrefcolor{http://www.miktex.org/}{MiKTeX} (GNU/Linux, Mac OS, Windows)
+\end{itemize}
+\vspace{3ex}
+
+No Ubuntu, Debian ou demais distribuições da mesma família, basta usar o comando:
+\begin{verbatim}
+$ sudo apt-get install texlive
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Editores para \LaTeX{}}
+\framesubtitle{Até mesmo um bloco de notas pode ser um editor!}
+\begin{itemize}
+  \item \hrefcolor{http://www.xm1math.net/texmaker/}{TeXMaker} (cross-platform)
+  \item \hrefcolor{http://kile.sourceforge.net/}{Kile} (KDE - Linux)
+  \item \hrefcolor{http://www.lyx.org/}{Lyx} (versão WYSIWYM e cross-platform)
+  \item \hrefcolor{https://www.texstudio.org/}{TeXstudio} (cross-platform)
+  \item \hrefcolor{https://www.overleaf.com/}{Overleaf (ShareLaTeX + Overleaf)}
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Overleaf}
+\framesubtitle{Editor online}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/overleaf.png}
+    \caption{Editor online Overleaf.}
+    \label{fig:overleaf}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Comparação entre editores}
+\framesubtitle{Escolha a que mais lhe agrada!}
+  \hrefcolor{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors}{Comparação} entre editores \TeX \ na Wikipedia.
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{figures/editorschart.png}
+  \label{fig:editorschart}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compilando seu documento \TeX{}}
+\framesubtitle{Para visualizar o documento é necessário compilá-lo.}
+   \begin{description}
+   \item[\TeX] gera um arquivo DVI (DeVice Independent) ao ``compilar'' um arquivo .tex
+   \item[pdfTeX] gera um PDF
+   \item[LaTeX2RTF] converter arquivo de \LaTeX (.tex) em um arquivo  Rich Text Format (.rtf)
+   \item[dvips] converte um DVI em um aquivo PostScript (PS)
+   \item[dvipdf] traduz um arquivo DVI em PDF
+   \item[pdfLaTeX] gera um PDF diretamente
+   \end{description}
+\end{frame}
+
+\subsection{Exemplos}
+\begin{frame}
+\frametitle{Exemplos}
+\framesubtitle{um documento simples}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{figures/exdoc.png}
+  \label{fig:exdoc}
+  \end{figure}
+\end{frame}
+
+\multido{\i=1+1}{7}{%
+  \begin{frame}
+    \frametitle{Exemplo}
+    \framesubtitle{Abralin \i}
+    \centering
+    \includegraphics[height=0.7\textheight]{figures/abralin0\i.png}
+  \end{frame}
+ }
+ 
+\multido{\i=1+1}{4}{%
+  \begin{frame}
+    \frametitle{Exemplo}
+    \framesubtitle{\hrefcolor{https://www.tug.org/texshowcase/}{TeX showcase} \i}
+    \centering
+    \includegraphics[height=0.5\textheight]{figures/showcase0\i.png}
+  \end{frame}
+ }
+ 
+%\begin{frame}
+%\frametitle{\LaTeX{}}
+%\framesubtitle{}
+%\begin{itemize}
+%  \item
+%\end{itemize}
+%\end{frame}
