@@ -1,0 +1,29 @@
+\begin{frame}[fragile]
+\frametitle{Comandos}
+\framesubtitle{definindo novos comandos}
+
+\begin{verbatim}
+\newcommand{\R}{$\mathbb{R}$}
+\end{verbatim}
+
+Podemos definir novos comandos: \R.
+É uma boa prática definí-los no preambulo do documento.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comandos}
+\framesubtitle{comandos com parâmetros}
+
+\begin{verbatim}
+\newcommand{\bb}[1]{$\mathbb{#1}$}
+
+utilização:
+\bb{C}, \bb{B}, \bb{D}
+\end{verbatim}
+
+Definimos acima um comando que possui um parâmetro.
+Pode assim fácilmente gerar: \bb{C}, \bb{B}, \bb{D}.
+
+\end{frame}
+
