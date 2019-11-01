@@ -1,0 +1,6 @@
+- doi2bib, google books, isbn2bib 
+- tables online
+- markdown to latex 
+
+define commands
+
