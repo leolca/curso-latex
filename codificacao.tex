@@ -2,7 +2,7 @@
 \frametitle{Codificação de arquivos}
 \framesubtitle{}
 \centering
-\includegraphics[width=0.5\linewidth]{figures/TexLionWhistle.jpg}
+\includegraphics[width=0.4\linewidth]{figures/TexLionWhistle.jpg}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -48,8 +48,8 @@ oct         124      144     130
 \begin{frame}
 \frametitle{Codificação de arquivos}
 \framesubtitle{Código Morse - Samuel Morse e Alfred Vail (1837)}
-
-	\includegraphics[width=0.5\textwidth]{figures/MorseCode.pdf} \hspace{3em}
+        \centering
+	\includegraphics[width=0.3\textwidth]{figures/MorseCode.pdf} \hspace{3em}
 	\includegraphics[width=0.3\textwidth]{figures/samuelmorse.jpg}
 \end{frame}
 \note{
@@ -69,8 +69,9 @@ de múltiplos fios proposto por Cooke e Wheatstone, que havia sido patenteado em
 \begin{frame}
 \frametitle{Codificação de arquivos}
 \framesubtitle{Código Baudot e Código Murray}
-	\includegraphics[width=0.45\textwidth]{figures/BaudotCode.png} \hspace{2em}
-	\includegraphics[width=0.45\textwidth]{figures/murraybaudot.png}
+        \centering
+	\includegraphics[width=0.3\textwidth]{figures/BaudotCode.png} \hspace{2em}
+	\includegraphics[width=0.35\textwidth]{figures/murraybaudot.png}
 \end{frame}
 \note{
 Na França, Emile Baudout projetou seus sistema para o telégrafo em 1874.
@@ -103,7 +104,8 @@ LF (line feed).
 \begin{frame}
 \frametitle{Codificação de arquivos}
 \framesubtitle{Código Murray}
-        \includegraphics[width=0.4\textwidth]{figures/murrayapparatus.jpg} 
+        \centering
+        \includegraphics[width=0.35\textwidth]{figures/murrayapparatus.jpg} 
 \end{frame}
 
 
@@ -125,7 +127,8 @@ LF (line feed).
 \begin{frame}
 \frametitle{Codificação de arquivos}
 \framesubtitle{ASCII 1963 (7 bits)}
-\includegraphics[width=0.75\textwidth]{figures/USASCII.png}
+\centering
+\includegraphics[width=0.65\textwidth]{figures/USASCII.png}
 \end{frame}
 \note{
 \scriptsize
@@ -209,15 +212,20 @@ extensão do ASCII utilizando o bit extra.
   \item Criado por Ken Thompson e Rob Pike.
   \end{itemize}
 
-  \includegraphics[width=0.95\textwidth]{figures/utf8bytes.png}
+  \includegraphics[width=0.85\textwidth]{figures/utf8bytes.png}
 
-  \includegraphics[width=0.75\textwidth]{figures/unicodeweb.png}
+  {
+  \centering
+  \includegraphics[width=0.55\textwidth]{figures/unicodeweb.png} 
+  }
+  \footnotesize{googleblog: \url{https://googleblog.blogspot.com.br/2010/01/unicode-nearing-50-of-web.html}}
+  
 
-	\footnotesize{googleblog: \url{https://googleblog.blogspot.com.br/2010/01/unicode-nearing-50-of-web.html}}
-
-  \includegraphics[width=0.85\textwidth]{figures/w3usage.png}
-
-	\footnotesize{W3Techs: \url{https://w3techs.com/technologies/history_overview/character_encoding/ms/y}}
+  {
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/w3usage.png}
+  }
+  \footnotesize{W3Techs: \url{https://w3techs.com/technologies/history_overview/character_encoding/ms/y}}
 \end{frame}
 
 
@@ -256,6 +264,7 @@ extensão do ASCII utilizando o bit extra.
   \item[MSB 0]: a numberação dos bits inicia-se pelo mais significante - S/390, PowerPC e PA-RISC (recomendada pela RfC).
   \end{description}
 
+  \framebreak
   \begin{itemize}
   \item Lilliput - Viagens de Gulliver (Jonathan Swift).
   \item Unicode - marcador BOM (Byte Order Mark) - ponto de representação \texttt{U+FEFF}.
