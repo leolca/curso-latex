@@ -13,3 +13,4 @@
 \beamer@subsectionintoc {2}{9}{Bibliografia}{102}{0}{2}
 \beamer@sectionintoc {3}{Erros e Vaisos}{107}{0}{3}
 \beamer@sectionintoc {4}{Dicas e Ajuda}{111}{0}{4}
+\beamer@sectionintoc {5}{Codifica\IeC {\c c}\IeC {\~a}o}{115}{0}{5}
